@@ -44,17 +44,18 @@ document.querySelector('#skip').addEventListener('click', function() {
 
 })
 
-// This code allows user to mute the video 
+// This code allows user to mute the video
+// ERROR it is not displaying right  
 document.querySelector('#mute').addEventListener('click', function() {
 	if (video.muted == false) {
 		console.log('Mute Video')
 		video.muted = true;
-		// need to add code to change the button so the text now says Unmute so user knows to click again to Unmute
+		document.querySelector('#mute').innerHTML = "Unmute"
 	}
 	else {
 		video.muted = false;
 		console.log('Unmuted Video')
-		// need to add code to change the button so the text now says mute so user knows to click again to mute
+		document.querySelector('#mute').innerHTML = 'Mute'
 	}
 })
 
